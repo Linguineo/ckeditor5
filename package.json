@@ -20,10 +20,9 @@
     "real-time",
     "framework"
   ],
-  "main": "./build/ckeditor.js",
+  "main": "build/ckeditor.js",
   "files": [
-    "build",
-    "ckeditor5-metadata.json"
+    "build/**"
   ],
   "dependencies": {
     "@ckeditor/ckeditor5-adapter-ckfinder": "^32.0.0",
@@ -70,11 +69,6 @@
   "bugs": "https://github.com/ckeditor/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git",
-    "directory": "packages/ckeditor5-build-classic"
-  },
-  "scripts": {
-    "build": "webpack --mode production",
-    "preversion": "npm run build"
+    "url": "https://github.com/Linguineo/ckeditor5.git"
   }
 }
