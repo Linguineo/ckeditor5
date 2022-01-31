@@ -44,7 +44,8 @@
     "@ckeditor/ckeditor5-paragraph": "^32.0.0",
     "@ckeditor/ckeditor5-paste-from-office": "^32.0.0",
     "@ckeditor/ckeditor5-table": "^32.0.0",
-    "@ckeditor/ckeditor5-typing": "^32.0.0"
+    "@ckeditor/ckeditor5-typing": "^32.0.0",
+    "@ckeditor/ckeditor5-upload": "^32.0.0"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-core": "^32.0.0",
