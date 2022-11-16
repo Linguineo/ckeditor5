@@ -20,7 +20,6 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -29,10 +28,13 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
+import Video from '@visao/ckeditor5-video/src/video';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -54,7 +56,6 @@ ClassicEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
-	ImageResize,
 	Indent,
 	Link,
 	List,
@@ -63,8 +64,11 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
+	TableProperties,
+	TableCellProperties,
 	TextTransformation,
-	SourceEditing
+	SourceEditing,
+	Video
 ];
 
 // Editor configuration.
@@ -87,7 +91,8 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			"sourceEditing"
 		]
 	},
 	image: {
@@ -104,7 +109,9 @@ ClassicEditor.defaultConfig = {
 		contentToolbar: [
 			'tableColumn',
 			'tableRow',
-			'mergeTableCells'
+			'mergeTableCells',
+			'tableProperties',
+			'tableCellProperties'
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
