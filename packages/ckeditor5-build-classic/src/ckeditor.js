@@ -9,12 +9,14 @@ import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classicedi
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
@@ -34,7 +36,6 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
-import Video from '@visao/ckeditor5-video/src/video';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -43,6 +44,7 @@ ClassicEditor.builtinPlugins = [
 	Essentials,
 	UploadAdapter,
 	SimpleUploadAdapter,
+	Alignment,
 	Autoformat,
 	Bold,
 	Italic,
@@ -51,6 +53,7 @@ ClassicEditor.builtinPlugins = [
 	CloudServices,
 	EasyImage,
 	Heading,
+	HtmlEmbed,
 	Image,
 	ImageCaption,
 	ImageStyle,
@@ -67,8 +70,7 @@ ClassicEditor.builtinPlugins = [
 	TableProperties,
 	TableCellProperties,
 	TextTransformation,
-	SourceEditing,
-	Video
+	SourceEditing
 ];
 
 // Editor configuration.
@@ -80,6 +82,7 @@ ClassicEditor.defaultConfig = {
 			'bold',
 			'italic',
 			'link',
+			'alignment',
 			'bulletedList',
 			'numberedList',
 			'|',
@@ -90,9 +93,10 @@ ClassicEditor.defaultConfig = {
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
+			'htmlEmbed',
 			'undo',
 			'redo',
-			"sourceEditing"
+			'sourceEditing'
 		]
 	},
 	image: {
